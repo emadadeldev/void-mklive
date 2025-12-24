@@ -150,6 +150,10 @@ build_variant() {
             PKGS="$PKGS $XORG_PKGS kde5 konsole firefox dolphin NetworkManager alacritty vlc fish"
             SERVICES="$SERVICES dbus NetworkManager sddm"
         ;;
+		i3wm)
+            PKGS="$PKGS $XORG_PKGS i3 i3status i3lock thunar rofi polybar thunar-volman gvfs file-roller alacritty firefox picom feh network-manager-applet"
+            SERVICES="$SERVICES dbus NetworkManager polkitd"
+        ;;
         *)
             >&2 echo "Unknown variant $variant"
             exit 1
