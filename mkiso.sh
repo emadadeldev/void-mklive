@@ -152,7 +152,8 @@ build_variant() {
         ;;
 		i3wm)
             PKGS="$PKGS $XORG_PKGS i3 i3status i3lock thunar rofi polybar thunar-volman gvfs file-roller alacritty firefox picom feh network-manager-applet"
-            SERVICES="$SERVICES dbus NetworkManager polkitd"
+            SERVICES="$SERVICES dbus lightdm NetworkManager polkitd"
+			LIGHTDM_SESSION=i3wm
         ;;
         *)
             >&2 echo "Unknown variant $variant"
