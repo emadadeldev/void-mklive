@@ -151,9 +151,14 @@ build_variant() {
             SERVICES="$SERVICES dbus NetworkManager sddm"
         ;;
 		i3wm)
-            PKGS="$PKGS $XORG_PKGS i3 i3status i3lock thunar rofi polybar thunar-volman gvfs file-roller alacritty firefox picom feh network-manager-applet"
+            PKGS="$PKGS $XORG_PKGS i3 i3status i3lock thunar rofi polybar thunar-volman gvfs file-roller alacritty pavucontrol  firefox picom feh network-manager-applet lightdm lightdm-gtk-greeter gnome-themes-standard gnome-keyring"
             SERVICES="$SERVICES dbus lightdm NetworkManager polkitd"
 			LIGHTDM_SESSION=i3wm
+        ;;
+		sway)
+            PKGS="$PKGS $XORG_PKGS sway waybar wofi alacritty thunar thunar-volman thunar-archive-plugin xarchiver pavucontrol network-manager-applet gvfs file-roller firefox lightdm lightdm-gtk-greeter udisks2"
+            SERVICES="$SERVICES dbus lightdm NetworkManager polkitd"
+            LIGHTDM_SESSION=sway
         ;;
         *)
             >&2 echo "Unknown variant $variant"
