@@ -151,7 +151,7 @@ build_variant() {
             SERVICES="$SERVICES dbus NetworkManager sddm"
         ;;
 		i3wm)
-            PKGS="$PKGS $XORG_PKGS i3 i3status i3lock thunar rofi polybar thunar-volman gvfs file-roller alacritty pavucontrol  firefox picom feh network-manager-applet lightdm lightdm-gtk-greeter gnome-themes-standard gnome-keyring"
+            PKGS="$PKGS $XORG_PKGS i3 i3status i3lock thunar rofi polybar thunar-volman gvfs file-roller alacritty pavucontrol firefox picom feh network-manager-applet lightdm lightdm-gtk-greeter gnome-themes-standard gnome-keyring"
             SERVICES="$SERVICES dbus lightdm NetworkManager polkitd"
 			LIGHTDM_SESSION=i3wm
         ;;
