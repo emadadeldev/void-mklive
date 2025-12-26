@@ -156,7 +156,7 @@ build_variant() {
 			LIGHTDM_SESSION=i3wm
         ;;
 		sway)
-            PKGS="$PKGS $WAYLAND_PKGS sway alacritty thunar thunar-volman thunar-archive-plugin xarchiver pavucontrol network-manager-applet gvfs file-roller firefox lightdm lightdm-gtk-greeter udisks2 gnome-themes-standard gnome-keyring"
+            PKGS="$PKGS $XORG_PKGS $WAYLAND_PKGS sway alacritty thunar thunar-volman thunar-archive-plugin xarchiver pavucontrol network-manager-applet gvfs file-roller firefox lightdm lightdm-gtk-greeter udisks2 gnome-themes-standard gnome-keyring"
             SERVICES="$SERVICES dbus lightdm NetworkManager polkitd"
             LIGHTDM_SESSION=sway
         ;;
