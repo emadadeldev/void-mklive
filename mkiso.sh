@@ -124,7 +124,7 @@ build_variant() {
     esac
 
     A11Y_PKGS="espeakup void-live-audio brltty"
-    PKGS="dialog cryptsetup lvm2 mdadm void-docs-browse xtools-minimal xmirror chrony tmux $A11Y_PKGS $GRUB_PKGS"
+    PKGS="dialog cryptsetup lvm2 mdadm xtools-minimal xmirror chrony tmux $A11Y_PKGS $GRUB_PKGS"
     FONTS="font-misc-misc terminus-font dejavu-fonts-ttf"
     WAYLAND_PKGS="$GFX_WL_PKGS $FONTS orca"
     XORG_PKGS="$GFX_PKGS $FONTS xorg-minimal xorg-input-drivers setxkbmap xauth orca"
@@ -181,6 +181,10 @@ build_variant() {
         *)
             >&2 echo "Unknown variant $variant"
             exit 1
+        ;;
+		dwm)
+            PKGS="$PKGS $XORG_PKGS dwm Thunar dmenu thunar-volman gvfs file-roller alacritty pavucontrol firefox network-manager-applet gnome-themes-standard gnome-keyring"
+            SERVICES="$SERVICES dbus NetworkManager polkitd"
         ;;
     esac
 
